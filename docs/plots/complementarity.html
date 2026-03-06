@@ -1,0 +1,45 @@
+<div>
+  <label for="k-slider"><strong>k:</strong></label>
+  <input type="range" id="k-slider" min="0.0001" max="0.25" value="0.25" step="0.0001" style="width:200px;">
+  <span id="k-value">0.25</span>
+</div>
+<div id="plot" style="width:100%;max-width:600px;height:400px;"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() { // Load after Plotly loads
+function r(t, k) {
+    t = t/Math.sqrt(k)
+    return Math.sqrt(k)*0.5*(t + Math.sqrt(t**2 + 4))
+}
+function plotY(k) {
+  const x = [];
+  const y = [];
+  for (let i = -120; i <= 120; i++) {
+    console.log(i/100.0)
+    x.push(r(i/100.0, k))
+    y.push(r(-i/100.0, k))
+  }
+  Plotly.newPlot('plot', [{
+    x: x,
+    y: y,
+    mode: 'lines',
+    name: 'y = k/x',
+    xlim: [0, 1]
+  }], {
+    margin: { t: 20 },
+    xaxis: { title: 'x', range: [0.0, 1.1] },
+    yaxis: { title: 'y', range: [0.0, 1.1] }
+  }, {staticPlot: true});
+}
+
+const slider = document.getElementById('k-slider');
+const kValue = document.getElementById('k-value');
+slider.addEventListener('input', function() {
+  kValue.textContent = slider.value;
+  plotY(Number(slider.value));
+});
+
+// Initial plot
+plotY(Number(slider.value));
+});
+</script>
