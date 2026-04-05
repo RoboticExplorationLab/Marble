@@ -1,18 +1,38 @@
-site_name: RCQP
+site_name: Marble
 nav:
   - Home: index.md
-  - Constraint Qualification: constraint_qualification.md
-
+  # - Constraint Qualification: constraint_qualification.md
+  - Example Problems:
+    - Contact: example_problems/ex_hopper.md
+    - Progress Constraints: example_problems/ex_gate_traversal.md
+    - State-Triggered Constraints: example_problems/ex_rocket_catch.md
 theme:
   name: material
 extra_css:
   - style.css
 markdown_extensions:
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.snippets:
         check_paths: true
   - pymdownx.arithmatex:
       generic: true
-
+  - pymdownx.tabbed:
+      alternate_style: true
+extra:
+  social:
+    - icon: fontawesome/brands/youtube
+      link: TODO
+      name: Marble on YouTube
+    - icon: fontawesome/brands/github
+      link: TODO
+      name: Marble on GitHub
+    - icon: simple/arxiv
+      link: TODO
+      name: Marble on arXiv
+copyright: "Robotic Exploration Lab (RExLab)"
 extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   - https://cdn.plot.ly/plotly-3.4.0.min.js
