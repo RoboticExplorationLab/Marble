@@ -19,11 +19,11 @@ Many problems in robotics require reasoning over a mix of continuous dynamics an
 
 # Background
 ## What is complementarity?
-Complementarity constraints introduce a switching relationship between two variables so that one or the other can be positive, but not both at the same time. For example, given scalars $s$ and $t$, complementarity consists of three constraints
+Complementarity constraints restrict two variables to be positive and mutually exclusive; one or the other is zero. Given scalars $s$ and $t$ this can be written as
 
 $$\begin{align}s, \,\, t &\geq 0 \\  s \cdot t &= 0\end{align}$$
 
-The last constraint encodes an exclusive or (XOR) between the two variables and gives the switching behavior. When $s$ and $t$ are vectors, the complementarity constraint uses element-wise multiplication $s \circ t = 0$. Often we use the shorthand $0 \leq s \perp t \geq 0$ to denote this set of constraints. 
+When $s$ and $t$ are vectors, $s \circ t = 0$ provides the element-wise exclusivity constraint, and the set of constraints is often written using the shorthand $0 \leq s \perp t \geq 0$. 
 
 ??? "Examples of Complementarity"
     === "Contact Dynamics"
@@ -60,7 +60,8 @@ The last constraint encodes an exclusive or (XOR) between the two variables and 
 
 <div style="display:flex; gap:2em; align-items:center;">
 <div style="flex:1;">
-The feasible set of \(0 \leq s \perp t \geq 0\) is a non-convex, \(L\)-shaped region. We can smooth this feasible set by instead requiring \(s \cdot t = \kappa\) for some \(\kappa > 0\). Examples of the original and relaxed feasible sets are shown to the right for varying \(\kappa\). Notice that the relaxed complementarity feasible set for scalar \( s, t \in \mathbb{R} \) is actually a \(1\)-dimensional manifold which can be implicitly paramaterized. 
+The feasible set of \(0 \leq s \perp t \geq 0\) is a non-convex, \(L\)-shaped region. We can smooth this feasible set by instead requiring \(s \cdot t = \kappa\) for some \(\kappa > 0\). Examples of the original and relaxed feasible sets are shown to the right for varying \(\kappa\). 
+<br><br>Notice that the relaxed complementarity feasible set for scalar \( s, t \in \mathbb{R} \) is a \(1\)-dimensional manifold which can be implicitly paramaterized. 
 For scalars \( s, t \in \mathbb{R} \), we can satisfy relaxed complementarity by construction by choosing \( s = p_\kappa(\sigma) \) and \( t = p_\kappa(-\sigma) \) for a function \( p_\kappa \) which satisfies:
 </div>
 <div style="flex:1;">
@@ -72,11 +73,10 @@ $$
 p_\kappa(\sigma) : \mathbb{R} \to \mathbb{R}^+ \quad \text{such that} \quad p_\kappa(\sigma) \cdot p_\kappa(-\sigma) = \kappa
 $$
 
-Using this paramaterization, we are guanteed to satisfy $s \geq 0, \, t \geq 0, \, s \cdot t = \kappa$. **This implicit paramaterization underlies the methods used in our solver.**
+Using this paramaterization, we are guanteed to satisfy relaxed complementarity by construction **This implicit paramaterization underlies the methods used in our solver.**
 
 !!! note "Choosing a Paramaterization \( p_\kappa \)"
-    An easy-to-verify example of $p_\kappa$ is the exponential function $\sqrt{\kappa} e^x$ which clearly satisfies $\sqrt{\kappa} e^x > 0$ and $\sqrt{\kappa}e^x \cdot \sqrt{\kappa}e^{-x} = \kappa$. The exponential is not the only function with this property, however. 
-    We find that the following retraction function is more numerically stable and has bounded gradients:
+    An easy-to-verify example of $p_\kappa$ is the exponential function $\sqrt{\kappa} e^x$ which clearly satisfies $\sqrt{\kappa} e^x > 0$ and $\sqrt{\kappa}e^x \cdot \sqrt{\kappa}e^{-x} = \kappa$. The exponential is not the only function with this property, and we found that the following retraction function is more numerically stable and has bounded gradients:
 
     $$
     p_\kappa(\sigma) = \frac{\sqrt{\kappa}}{2}\left(\frac{\sigma}{\sqrt\kappa} + \sqrt{\left(\frac{\sigma}{\sqrt\kappa}\right)^2 + 4}\right)
@@ -139,21 +139,28 @@ The MacMPEC benchmarks contains a variety of complementarity problems from field
 We formulate and solve three robotics-specific problems chosen to demonstrate the capabilities of LCQPs to model a wide variety of systems and behaviors.
 
 #### Progress Constraints
-A quadrotor flies through racing gates with a specified completion order, but the knot points at which the
-drone flies through each gate are unspecified. Instead, complementarity is used to write the dynamics of a virtual
-progress state controlle by passing through each gate.
+A quadrotor flies through racing gates with a specified completion order. Complementarity ties the switching of each gate completion indicator to trigger conditions that the quadrotor satisfies when it passes through each gate.
 <video controls autoplay loop muted src="videos/progress_constraints.mp4" title="Progress Constraints"></video>
 
 #### State-Triggered Constraints
-A rocket with gimballed engines is guided into a catch tower while range-triggered safety constraints ensure the rocket stays in front of the catch tower and the engine points away from the tower.
+A rocket with gimballed engines is guided into a catch tower. Complementarity actiavtes safety constraints to ensure the rocket stays in front of the catch tower and the engine points away from the tower when the rocket is within range.
 <video controls autoplay loop muted src="videos/state_triggered_constraints.mp4" title="State-Triggered Constraints"></video>
 
 #### Contact and Friction
-A planar hopper traverses a raised platform with stairs. Making and breaking contact is modeled as complementarity between the signed distance to the floor $d$ and the normal force $f_n$, avoiding force-at-a-distance or penetration artifacts. Friction forces are also complementary with signed distance $d$.
+A planar hopper traverses a raised platform with stairs. Complementarity models making and breaking contact, a no-slip condition, and the signed distance function of the staircase.
 <video controls autoplay loop muted src="videos/contact.mp4" title="Contact and Friction"></video>
 
 # Citing
-TODO: add citaion block
-```
-TODO
+If you use this work in your research, please cite it as follows:
+
+```bibtex
+@article{bishop2026complementarityconstructionliegroupapproach,
+      title={Complementarity by Construction: A Lie-Group Approach to Solving Quadratic Programs with Linear Complementarity Constraints}, 
+      author={Arun L. Bishop and Micah I. Reich and Zachary Manchester},
+      year={2026},
+      eprint={2604.11991},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2604.11991}, 
+}
 ```
