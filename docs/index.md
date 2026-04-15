@@ -1,9 +1,18 @@
 # Complementarity by Construction
 <span class="subtitle">A Novel Approach to Solving Quadratic Programs with Linear Complementarity Constraints</span>
+[Arun L. Bishop](https://www.linkedin.com/in/arun-bishop/), [Micah I. Reich](https://www.linkedin.com/in/micah-reich), and [Zachary Manchester](https://www.linkedin.com/in/zacmanchester/)
 
 ![Three example problems for our solver, showing a hopper hopping over stairs (left), a rocket catch (middle), and a quadrotor flying through gates (right)](images/topfigure.png)
 
 <!-- Marble is an open-source solver for quickly finding local solutions to quadratic programs with linear complementarity constraints (LCQPs). LCQPs are incredibly expressive, as shown by the examples above, but this comes at the price of non-convexity and disjoint feasible sets, making them challenging to solve. Given our view that LCQPs are as critical to reasoning about non-smooth or switching systems as QPs are critical to smooth optimization, we hope that this solver provides a useful tool to practically tackle them. -->
+
+<div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;" markdown="1">
+
+[:fontawesome-solid-file-pdf: Paper](https://arxiv.org/abs/2604.11991){ .md-button .btn-academic target="_blank" }
+[:fontawesome-brands-github: Code (coming soon)](#){ .md-button .btn-academic aria-disabled="true" tabindex="-1" role="button"}
+<!-- [:simple-arxiv: arXiv](https://arxiv.org/abs/2604.11991){ .md-button .btn-academic target="_blank" } -->
+
+</div>
 
 # Abstract
 Many problems in robotics require reasoning over a mix of continuous dynamics and discrete events, such as making and breaking contact in manipulation and locomotion. These problems are locally well modeled by linear complementarity quadratic programs (LCQPs), an extension to QPs that introduce complementarity constraints. While very expressive, LCQPs are non-convex, and few solvers exist for computing good local solutions for use in planning pipelines. In this work, we observe that complementarity constraints form a Lie group under infinitesimal relaxation, and leverage this structure to perform on-manifold optimization. We introduce a retraction map that is numerically well behaved, and use it to parameterize the constraints so that they are satisfied by construction. The resulting solver avoids many of the classical issues with complementarity constraints. We provide an open-source solver, Marble, that is implemented in C++ with Julia and Python bindings. We demonstrate that Marble is competitive on a suite of benchmark problems, and solves a number of robotics problems where existing approaches fail to converge.

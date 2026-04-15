@@ -2,10 +2,10 @@ site_name: Marble
 nav:
   - Home: index.md
   # - Constraint Qualification: constraint_qualification.md
-  - Example Problems:
-    - Contact: example_problems/ex_hopper.md
-    - Progress Constraints: example_problems/ex_gate_traversal.md
-    - State-Triggered Constraints: example_problems/ex_rocket_catch.md
+  # - Example Problems:
+  #   - Contact: example_problems/ex_hopper.md
+  #   - Progress Constraints: example_problems/ex_gate_traversal.md
+  #   - State-Triggered Constraints: example_problems/ex_rocket_catch.md
 theme:
   name: material
 extra_css:
@@ -21,6 +21,10 @@ markdown_extensions:
       generic: true
   - pymdownx.tabbed:
       alternate_style: true
+  - attr_list 
+  - pymdownx.emoji: 
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 extra:
   social:
     - icon: fontawesome/brands/youtube
