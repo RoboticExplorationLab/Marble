@@ -124,7 +124,7 @@ $$\begin{align}
     &Rz + r = p_\kappa(-\sigma)
 \end{align}$$
 
-The above optimization problem is referred to as a subproblem and is solved for a schedule of relaxation parameters $\kappa$ with $\kappa \to 0$. Each subproblem is solved using a standard Augmented Lagrangian-based method with a filter linesearch for globalization. Details on the solver implementation and derivation can be found in our paper here (((TODO link))).
+The above optimization problem is referred to as a subproblem and is solved for a schedule of relaxation parameters $\kappa$ with $\kappa \to 0$. Each subproblem is solved using a standard Augmented Lagrangian-based method with a filter linesearch for globalization. Details on the solver implementation and derivation can be found in our paper.
 
 ## Results
 
