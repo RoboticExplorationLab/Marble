@@ -134,6 +134,12 @@ We compare our solver against LCQPow, a penalty-SQP based method for solving LCQ
 
 The MacMPEC benchmarks contains a variety of complementarity problems from fields such as game theory, operations research, and structural dynamics. We solved the 39 MacMPEC problems that are LCQPs and compare against LCQPow and Gurobi. Our solver obtains feasible solutions for all problems and finds the global solution for 38 of 39 problems. LCQPow fails to achieve a complementarity tolerance less than $10^{-5}$ for one problem and finds the global solution for 33 problems. For every problem, our method achieves an equal or better solution compared to LCQPow. Additionally, Marble often outperforms LCQPow and Gurobi in solve time.
 
+<figure markdown="span">
+  ![MacMPEC Performance Profile](plots/performance_profile.png){ width="75%" }
+</figure>
+
+The plot above shows the performance profile of each solver, where $\tau$ is solve time for each problem scaled by the minimum solve time across the three solvers. 
+
 ### Trajectory Optimization Problems
 
 We formulate and solve three robotics-specific problems chosen to demonstrate the capabilities of LCQPs to model a wide variety of systems and behaviors.
