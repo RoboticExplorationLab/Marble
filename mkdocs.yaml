@@ -1,11 +1,25 @@
 site_name: Marble
 nav:
   - Home: index.md
+  - Getting Started:
+    - Julia: getting_started/julia.md
+    - Python: getting_started/python.md
   # - Constraint Qualification: constraint_qualification.md
   # - Example Problems:
   #   - Contact: example_problems/ex_hopper.md
   #   - Progress Constraints: example_problems/ex_gate_traversal.md
   #   - State-Triggered Constraints: example_problems/ex_rocket_catch.md
+
+  - C++ API: 
+    - Overview: api/index.md
+    - Solver: api/Solver.md
+    - Options: api/Solver/Options.md
+    - Problem: api/Problem.md
+    - Workspace: api/Workspace.md
+    - Filter: api/Filter.md
+    - SolveResult: api/SolveResult.md
+    - InitialPoint: api/InitialPoint.md
+
 theme:
   name: material
 extra_css:

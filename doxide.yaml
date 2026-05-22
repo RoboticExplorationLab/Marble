@@ -1,0 +1,6 @@
+title: C++ API Documentation
+description: 
+files:
+  - "../MarbleSolver/include/*.h"
+  - "../MarbleSolver/src/*.cpp"
+output: docs/api
