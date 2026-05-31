@@ -9,16 +9,16 @@
 <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;" markdown="1">
 
 [:fontawesome-solid-file-pdf: Paper](https://arxiv.org/abs/2604.11991){ .md-button .btn-academic target="_blank" }
-[:fontawesome-brands-github: Code (coming soon)](#){ .md-button .btn-academic aria-disabled="true" tabindex="-1" role="button"}
+[:fontawesome-brands-github: Code](https://github.com/MarbleSolver/Marble){ .md-button .btn-academic target="_blank" }
 <!-- [:simple-arxiv: arXiv](https://arxiv.org/abs/2604.11991){ .md-button .btn-academic target="_blank" } -->
 
 </div>
 
+!!!note
+    The website and codebase are still a work-in-progress and do not have the paper examples up yet. We will upload the examples soon, but until then check out the getting started section to try out the solver yourself!
+
 # Abstract
 Many problems in robotics require reasoning over a mix of continuous dynamics and discrete events, such as making and breaking contact in manipulation and locomotion. These problems are locally well modeled by linear complementarity quadratic programs (LCQPs), an extension to QPs that introduce complementarity constraints. While very expressive, LCQPs are non-convex, and few solvers exist for computing good local solutions for use in planning pipelines. In this work, we observe that complementarity constraints form a Lie group under infinitesimal relaxation, and leverage this structure to perform on-manifold optimization. We introduce a retraction map that is numerically well behaved, and use it to parameterize the constraints so that they are satisfied by construction. The resulting solver avoids many of the classical issues with complementarity constraints. We provide an open-source solver, Marble, that is implemented in C++ with Julia and Python bindings. We demonstrate that Marble is competitive on a suite of benchmark problems, and solves a number of robotics problems where existing approaches fail to converge.
-
-!!!note
-    Check out the Getting Started pages if you want to go directly to using the solver
 
 # Background
 ## What is complementarity?
