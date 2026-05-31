@@ -23,7 +23,9 @@ generator: doxide
 | [retract_deriv](#retract_deriv) | Retraction map derivative (elementwise)  |
 | [retract_second_deriv](#retract_second_deriv) | Retraction map second derivative (elementwise)  |
 | [ruiz_equilibration](#ruiz_equilibration) | Ruiz equilibration for current problem data using copies of H and J_*. |
-| [set_problem](#set_problem) | Sets the problem for the solver, populates the KKT system, computes sparsity indexing  |
+| [set_problem](#set_problem) | Sets the problem for the solver given sparse matrices, computes sparsity indexing  |
+| [set_problem](#set_problem) | Sets the problem for the solver given dense matrices, computes sparsity indexing  |
+| [set_problem](#set_problem) | Populates the KKT system, computes sparsity indexing  |
 | [get_problem](#get_problem) | Returns the problem currently set for the solver  |
 | [initialize_kkt_sparsity](#initialize_kkt_sparsity) | Construct and initialize KKT sparsity  |
 | [update_KKT_residual](#update_KKT_residual) | Compute KKT residual given the current guess stored in the workspace  |
@@ -163,16 +165,25 @@ generator: doxide
     
 
 ### set_problem<a name="set_problem"></a>
-!!! function "void set_problem(const Problem&amp; prob)"
+!!! function "void set_problem(SMat cost_hessian, Vec cost_gradient, double cost_const, SMat J_eq, Vec c_eq, SMat J_ineq, Vec c_ineq, SMat L, Vec l, SMat R, Vec r, Solver::Options&amp; options)"
 
-    Sets the problem for the solver, populates the KKT system, computes sparsity indexing
+    Sets the problem for the solver given sparse matrices, computes sparsity indexing
+    
+
+!!! function "void set_problem(Mat cost_hessian, Vec cost_gradient, double cost_const, Mat J_eq, Vec c_eq, Mat J_ineq, Vec c_ineq, Mat L, Vec l, Mat R, Vec r, Solver::Options&amp; options)"
+
+    Sets the problem for the solver given dense matrices, computes sparsity indexing
+    
+
+!!! function "void set_problem(const Solver::Options&amp; options)"
+
+    Populates the KKT system, computes sparsity indexing
     
 
 ### solve<a name="solve"></a>
-!!! function "SolveResult solve(const Options&amp; options, const InitialPoint&#42; initial_point = nullptr)"
+!!! function "SolveResult solve()"
 
     Solve the current problem instance.
-            Optionally provide initial_z (size nz) to warm-start the primal variables.
     
 
 ### update_KKT_comp<a name="update_KKT_comp"></a>
