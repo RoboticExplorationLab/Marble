@@ -14,11 +14,20 @@ h2 {
   max-width: 90vw;   /* 90% of the viewport width */
   width: 100%;
 }
-.md-sidebar--primary {
-  width: 15vw; 
+/* Only narrow the sidebars on large screens, where they're shown inline.
+   Below these breakpoints they become slide-out drawers and must keep
+   their default full width so the nav text stays readable. */
+
+/* Primary sidebar is rendered inline at >= 76.25em (1220px) */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: 15vw;
+  }
 }
 
-/* Reduce width of the secondary sidebar (table of contents) */
-.md-sidebar--secondary {
-  width: 15vw; 
+/* Secondary sidebar (table of contents) is rendered inline at >= 60em (960px) */
+@media screen and (min-width: 60em) {
+  .md-sidebar--secondary {
+    width: 15vw;
+  }
 }
