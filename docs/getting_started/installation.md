@@ -64,3 +64,27 @@ Once the build has completed, you can use Marble from your own Python virtual en
 ```bash
 pip install /path/to/Marble/python
 ```
+
+#### Extra: VSCode Autocomplete and Type Hints
+
+The high-level API in `Marble/python/marble/__init__.py` is type-annotated, and the compiled core ships a `Marble/python/marble/_core.pyi` stub that is regenerated each time you build `marble_python` (requires `pybind11-stubgen`). Pylance reads both from the `marble` package, so a single setting wires everything up.
+
+Add to `.vscode/settings.json`:
+```json
+{
+  "python.analysis.extraPaths": ["${workspaceFolder}/build/python"],
+  "python.analysis.useLibraryCodeForTypes": true
+}
+```
+`extraPaths` tells Pylance where the staged `marble` package (with `_core.so` and `_core.pyi`) lives so it can be imported.
+
+Then install the **Pylance** extension (`ms-python.vscode-pylance`); it picks up the setting automatically.
+
+If stubs are stale or missing, rebuild:
+```bash
+cmake --build --preset python --target marble_python
+```
+If `pybind11-stubgen` is not installed, CMake warns but the build still succeeds. Install it with:
+```bash
+pip install pybind11-stubgen
+```
