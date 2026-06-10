@@ -23,6 +23,8 @@ nav:
 
 theme:
   name: material
+  logo: assets/marble_logo_small.png
+  favicon: assets/marble_logo_small.png
 extra_css:
   - style.css
 markdown_extensions:
