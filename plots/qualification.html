@@ -1,0 +1,158 @@
+<div id="plotly-vector-wrap" style="max-width: 780px;">
+  <h3>Draggable normalized vector (Plotly)</h3>
+  <p>Drag the blue point. The red arrow is the normalized direction away from the origin.</p>
+  <div id="plotly-vector" style="width:100%;height:460px;"></div>
+  <p id="plotly-vector-readout" style="font-family: monospace;"></p>
+</div>
+
+<script>
+(() => {
+  function initPlotlyVector() {
+    const gd = document.getElementById("plotly-vector");
+    const readout = document.getElementById("plotly-vector-readout");
+    if (!gd || !readout || typeof Plotly === "undefined") return;
+    if (gd.dataset.initialized === "true") return;
+    gd.dataset.initialized = "true";
+
+    const XMIN = -10, XMAX = 10, YMIN = -10, YMAX = 10;
+    const ARROW_LEN = 2.5; // fixed length in data units; direction is normalized
+    let px = 4, py = 3;
+    let dragging = false;
+
+    const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+    function unit(x, y) {
+      const m = Math.hypot(x, y);
+      if (m === 0) return { ux: 0, uy: 0, m: 0 };
+      return { ux: x / m, uy: y / m, m };
+    }
+
+    function makeLayout() {
+      const { ux, uy } = unit(px, py);
+      const ex = px + ux * ARROW_LEN;
+      const ey = py + uy * ARROW_LEN;
+
+      return {
+        margin: { l: 50, r: 20, t: 20, b: 45 },
+        showlegend: false,
+        dragmode: false,
+        xaxis: {
+          range: [XMIN, XMAX],
+          fixedrange: true,
+          zeroline: true,
+          gridcolor: "#eee",
+          scaleanchor: "y",
+          scaleratio: 1
+        },
+        yaxis: {
+          range: [YMIN, YMAX],
+          fixedrange: true,
+          zeroline: true,
+          gridcolor: "#eee"
+        },
+        annotations: [{
+          x: ex, y: ey,
+          ax: px, ay: py,
+          axref: "x", ayref: "y",
+          showarrow: true,
+          arrowhead: 3,
+          arrowsize: 1.2,
+          arrowwidth: 3,
+          arrowcolor: "#d62728"
+        }]
+      };
+    }
+
+    function makeData() {
+      return [
+        {
+          type: "scatter",
+          mode: "lines",
+          x: [0, px],
+          y: [0, py],
+          line: { color: "#1f77b4", width: 3 },
+          hoverinfo: "skip"
+        },
+        {
+          type: "scatter",
+          mode: "markers",
+          x: [px],
+          y: [py],
+          marker: { color: "#1f77b4", size: 12 },
+          hoverinfo: "skip"
+        }
+      ];
+    }
+
+    function updateReadout() {
+      const { ux, uy, m } = unit(px, py);
+      readout.textContent =
+        `point=(${px.toFixed(2)}, ${py.toFixed(2)})   |v|=${m.toFixed(3)}   unit(v)=(${ux.toFixed(3)}, ${uy.toFixed(3)})`;
+    }
+
+    function redraw() {
+        return Plotly.react(gd, makeData(), makeLayout(), {
+            displayModeBar: false,
+            responsive: true,
+            scrollZoom: false
+        }).then(updateReadout);
+    }
+
+    function pointerToData(clientX, clientY) {
+      const rect = gd.getBoundingClientRect();
+      const xPix = clientX - rect.left;
+      const yPix = clientY - rect.top;
+
+      const xa = gd._fullLayout.xaxis;
+      const ya = gd._fullLayout.yaxis;
+
+      // pixel -> data (relative to axis offsets)
+      const xVal = xa.p2l(xPix - xa._offset);
+      const yVal = ya.p2l(yPix - ya._offset);
+
+      return {
+        x: clamp(xVal, XMIN, XMAX),
+        y: clamp(yVal, YMIN, YMAX)
+      };
+    }
+
+    function nearPoint(clientX, clientY, radiusPx = 14) {
+      const rect = gd.getBoundingClientRect();
+      const xa = gd._fullLayout.xaxis;
+      const ya = gd._fullLayout.yaxis;
+
+      const pxScreen = xa.l2p(px) + xa._offset + rect.left;
+      const pyScreen = ya.l2p(py) + ya._offset + rect.top;
+
+      const dx = clientX - pxScreen;
+      const dy = clientY - pyScreen;
+      return (dx * dx + dy * dy) <= radiusPx * radiusPx;
+    }
+
+    redraw().then(() => {
+  gd.addEventListener("mousedown", (e) => {
+    if (nearPoint(e.clientX, e.clientY)) dragging = true;
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!dragging) return;
+    const p = pointerToData(e.clientX, e.clientY);
+    px = p.x;
+    py = p.y;
+    redraw();
+  });
+
+  window.addEventListener("mouseup", () => {
+    dragging = false;
+  });
+});
+  }
+
+  // Normal load + MkDocs Material instant navigation
+  if (window.document$?.subscribe) {
+    window.document$.subscribe(initPlotlyVector);
+  } else {
+    window.addEventListener("DOMContentLoaded", initPlotlyVector);
+  }
+})();
+</script>

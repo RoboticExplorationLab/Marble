@@ -1,0 +1,36 @@
+<div id="complementarity2-plot" style="width:100%; height:300px;"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const ks = [0.01, 0.1, 0.25];
+  const colors = ['#1f77b4', '#ff7f0e', '#2ca02c'];
+
+  const axisMax = 1.1;
+  const hyperbolas = ks.map((k, i) => {
+    const sMin = k / axisMax; // where t = axisMax (top edge)
+    const sMax = axisMax;     // where t = k/axisMax (right edge)
+    const n = 200;
+    const x = [], y = [];
+    for (let j = 0; j <= n; j++) {
+      const si = sMin + (sMax - sMin) * j / n;
+      x.push(si);
+      y.push(k / si);
+    }
+    return { x, y, mode: 'lines', line: { color: colors[i], width: 2 }, name: `st = ${k}` };
+  });
+
+  const lshape = {
+    x: [0, axisMax, null, 0, 0],
+    y: [0, 0,       null, 0, axisMax],
+    mode: 'lines',
+    line: { color: 'black', width: 3 },
+    name: 'st = 0'
+  };
+
+  Plotly.newPlot('complementarity2-plot', [lshape, ...hyperbolas], {
+    margin: { t: 20, r: 20, b: 50, l: 50 },
+    xaxis: { title: 's', range: [0, 1.1] },
+    yaxis: { title: 't', range: [0, 1.1] },
+    legend: { x: 0.7, y: 0.95 }
+  }, { staticPlot: true, responsive: true });
+});
+</script>

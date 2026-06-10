@@ -1,0 +1,1576 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../Problem/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/marble_logo_small.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Options - Marble</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#options" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Marble" class="md-header__button md-logo" aria-label="Marble" data-md-component="logo">
+      
+  <img src="../../../assets/marble_logo_small.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Marble
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Options
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Marble" class="md-nav__button md-logo" aria-label="Marble" data-md-component="logo">
+      
+  <img src="../../../assets/marble_logo_small.png" alt="logo">
+
+    </a>
+    Marble
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_started/julia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Julia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_started/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++ API
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C++ API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Options
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convergence_comp_violation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        convergence_comp_violation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convergence_eq_violation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        convergence_eq_violation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convergence_ineq_violation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        convergence_ineq_violation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convergence_kkt_norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        convergence_kkt_norm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        debug
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug_log_every" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        debug_log_every
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug_output_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        debug_output_path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gamma_constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gamma_constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gamma_objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gamma_objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_iters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        max_iters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_iters_linesearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        max_iters_linesearch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outer_step_kkt_norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        outer_step_kkt_norm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        output_dir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penalty_initial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        penalty_initial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penalty_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        penalty_max
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penalty_scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        penalty_scaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print_every" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        print_every
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaxation_initial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        relaxation_initial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaxation_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        relaxation_min
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaxation_scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        relaxation_scaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruiz_iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ruiz_iterations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbosity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        verbosity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Problem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SolveResult/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SolveResult
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InitialPoint.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    InitialPoint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convergence_comp_violation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        convergence_comp_violation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convergence_eq_violation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        convergence_eq_violation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convergence_ineq_violation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        convergence_ineq_violation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convergence_kkt_norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        convergence_kkt_norm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        debug
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug_log_every" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        debug_log_every
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug_output_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        debug_output_path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gamma_constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gamma_constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gamma_objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gamma_objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_iters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        max_iters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_iters_linesearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        max_iters_linesearch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outer_step_kkt_norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        outer_step_kkt_norm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        output_dir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penalty_initial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        penalty_initial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penalty_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        penalty_max
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penalty_scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        penalty_scaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print_every" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        print_every
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaxation_initial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        relaxation_initial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaxation_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        relaxation_min
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaxation_scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        relaxation_scaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruiz_iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ruiz_iterations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbosity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        verbosity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="options">Options</h1>
+<p><strong>struct Options</strong></p>
+<p>Solver options</p>
+<h2 id="variables">Variables</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#convergence_kkt_norm">convergence_kkt_norm</a></td>
+<td>KKT Inf norm must be less than this value for convergence</td>
+</tr>
+<tr>
+<td><a href="#convergence_eq_violation">convergence_eq_violation</a></td>
+<td>Equality constraint violation Inf norm must be less than this value for convergence</td>
+</tr>
+<tr>
+<td><a href="#convergence_ineq_violation">convergence_ineq_violation</a></td>
+<td>Inequality constraint violation Inf norm must be less than this value for convergence</td>
+</tr>
+<tr>
+<td><a href="#convergence_comp_violation">convergence_comp_violation</a></td>
+<td>Complementarity constraint violation Inf norm must be less than this value for convergence</td>
+</tr>
+<tr>
+<td><a href="#outer_step_kkt_norm">outer_step_kkt_norm</a></td>
+<td>KKT Inf norm must be less than this value to take an outer step in the algorithm</td>
+</tr>
+<tr>
+<td><a href="#penalty_initial">penalty_initial</a></td>
+<td>Initial AL penalty parameter</td>
+</tr>
+<tr>
+<td><a href="#penalty_max">penalty_max</a></td>
+<td>Maximum AL penalty parameter</td>
+</tr>
+<tr>
+<td><a href="#penalty_scaling">penalty_scaling</a></td>
+<td>AL penalty parameter scaling factor, multiplies current penalty parameter</td>
+</tr>
+<tr>
+<td><a href="#relaxation_initial">relaxation_initial</a></td>
+<td>Initial relaxation parameter for complementarity and inequality constraints</td>
+</tr>
+<tr>
+<td><a href="#relaxation_min">relaxation_min</a></td>
+<td>Minimum relaxation parameter for complementarity and inequality constraints</td>
+</tr>
+<tr>
+<td><a href="#relaxation_scaling">relaxation_scaling</a></td>
+<td>Relaxation parameter scaling factor, multiplies current relaxation parameter</td>
+</tr>
+<tr>
+<td><a href="#max_iters">max_iters</a></td>
+<td>Maximum number of iterations for the solver, iterations refers to outer + inner iterations</td>
+</tr>
+<tr>
+<td><a href="#max_iters_linesearch">max_iters_linesearch</a></td>
+<td>Maximum number of iterations for the filter linesearch</td>
+</tr>
+<tr>
+<td><a href="#gamma_objective">gamma_objective</a></td>
+<td>(filter) Sufficient progress parameter for objective value decrease</td>
+</tr>
+<tr>
+<td><a href="#gamma_constraint">gamma_constraint</a></td>
+<td>(filter) Sufficient progress parameter for constraint violation decrease</td>
+</tr>
+<tr>
+<td><a href="#ruiz_iterations">ruiz_iterations</a></td>
+<td>Number of ruiz iterations for scaling</td>
+</tr>
+<tr>
+<td><a href="#output_dir">output_dir</a></td>
+<td>Output directory for solution and solve information</td>
+</tr>
+<tr>
+<td><a href="#verbosity">verbosity</a></td>
+<td>Verbosity level: 0=silent, 1=per-iteration table + footer</td>
+</tr>
+<tr>
+<td><a href="#print_every">print_every</a></td>
+<td>Print a row every N iterations (only used when verbosity &gt;= 1)</td>
+</tr>
+<tr>
+<td><a href="#debug">debug</a></td>
+<td>Write a JSONL debug log with iterates and solver state (one JSON object per line)</td>
+</tr>
+<tr>
+<td><a href="#debug_output_path">debug_output_path</a></td>
+<td>Path to the debug log file (used when debug=true)</td>
+</tr>
+<tr>
+<td><a href="#debug_log_every">debug_log_every</a></td>
+<td>Log every N iterations (1 = every iteration)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="variable-details">Variable Details</h2>
+<h3 id="convergence_comp_violation">convergence_comp_violation<a name="convergence_comp_violation"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double convergence_comp_violation</p>
+<p>Complementarity constraint violation Inf norm must be less than this value for convergence</p>
+</div>
+<h3 id="convergence_eq_violation">convergence_eq_violation<a name="convergence_eq_violation"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double convergence_eq_violation</p>
+<p>Equality constraint violation Inf norm must be less than this value for convergence</p>
+</div>
+<h3 id="convergence_ineq_violation">convergence_ineq_violation<a name="convergence_ineq_violation"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double convergence_ineq_violation</p>
+<p>Inequality constraint violation Inf norm must be less than this value for convergence</p>
+</div>
+<h3 id="convergence_kkt_norm">convergence_kkt_norm<a name="convergence_kkt_norm"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double convergence_kkt_norm</p>
+<p>KKT Inf norm must be less than this value for convergence</p>
+</div>
+<h3 id="debug">debug<a name="debug"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">bool debug</p>
+<p>Write a JSONL debug log with iterates and solver state (one JSON object per line)</p>
+</div>
+<h3 id="debug_log_every">debug_log_every<a name="debug_log_every"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">int debug_log_every</p>
+<p>Log every N iterations (1 = every iteration)</p>
+</div>
+<h3 id="debug_output_path">debug_output_path<a name="debug_output_path"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">std::string debug_output_path</p>
+<p>Path to the debug log file (used when debug=true)</p>
+</div>
+<h3 id="gamma_constraint">gamma_constraint<a name="gamma_constraint"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double gamma_constraint</p>
+<p>(filter) Sufficient progress parameter for constraint violation decrease</p>
+</div>
+<h3 id="gamma_objective">gamma_objective<a name="gamma_objective"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double gamma_objective</p>
+<p>(filter) Sufficient progress parameter for objective value decrease</p>
+</div>
+<h3 id="max_iters">max_iters<a name="max_iters"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">int max_iters</p>
+<p>Maximum number of iterations for the solver, iterations refers to outer + inner iterations</p>
+</div>
+<h3 id="max_iters_linesearch">max_iters_linesearch<a name="max_iters_linesearch"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">int max_iters_linesearch</p>
+<p>Maximum number of iterations for the filter linesearch</p>
+</div>
+<h3 id="outer_step_kkt_norm">outer_step_kkt_norm<a name="outer_step_kkt_norm"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double outer_step_kkt_norm</p>
+<p>KKT Inf norm must be less than this value to take an outer step in the algorithm</p>
+</div>
+<h3 id="output_dir">output_dir<a name="output_dir"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">std::filesystem::path output_dir</p>
+<p>Output directory for solution and solve information</p>
+</div>
+<h3 id="penalty_initial">penalty_initial<a name="penalty_initial"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double penalty_initial</p>
+<p>Initial AL penalty parameter</p>
+</div>
+<h3 id="penalty_max">penalty_max<a name="penalty_max"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double penalty_max</p>
+<p>Maximum AL penalty parameter</p>
+</div>
+<h3 id="penalty_scaling">penalty_scaling<a name="penalty_scaling"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double penalty_scaling</p>
+<p>AL penalty parameter scaling factor, multiplies current penalty parameter</p>
+</div>
+<h3 id="print_every">print_every<a name="print_every"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">int print_every</p>
+<p>Print a row every N iterations (only used when verbosity &gt;= 1)</p>
+</div>
+<h3 id="relaxation_initial">relaxation_initial<a name="relaxation_initial"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double relaxation_initial</p>
+<p>Initial relaxation parameter for complementarity and inequality constraints</p>
+</div>
+<h3 id="relaxation_min">relaxation_min<a name="relaxation_min"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double relaxation_min</p>
+<p>Minimum relaxation parameter for complementarity and inequality constraints</p>
+</div>
+<h3 id="relaxation_scaling">relaxation_scaling<a name="relaxation_scaling"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">double relaxation_scaling</p>
+<p>Relaxation parameter scaling factor, multiplies current relaxation parameter</p>
+</div>
+<h3 id="ruiz_iterations">ruiz_iterations<a name="ruiz_iterations"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">int ruiz_iterations</p>
+<p>Number of ruiz iterations for scaling</p>
+</div>
+<h3 id="verbosity">verbosity<a name="verbosity"></a></h3>
+<div class="admonition variable">
+<p class="admonition-title">int verbosity</p>
+<p>Verbosity level: 0=silent, 1=per-iteration table + footer</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Robotic Exploration Lab (RExLab)
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="TODO" target="_blank" rel="noopener" title="Marble on YouTube" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="TODO" target="_blank" rel="noopener" title="Marble on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="TODO" target="_blank" rel="noopener" title="Marble on arXiv" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.842 0a1 1 0 0 0-.922.608c-.153.369-.044.627.294 1.111l6.919 8.36-1.023 1.106a1.04 1.04 0 0 0 .003 1.423l1.23 1.313-5.44 6.444c-.28.3-.453.823-.297 1.199a1.025 1.025 0 0 0 .959.635.91.91 0 0 0 .689-.34l5.783-6.126 7.49 8.005a.85.85 0 0 0 .684.26.96.96 0 0 0 .877-.615c.158-.377-.017-.75-.306-1.14L13.73 13.9l1.064-1.13a.963.963 0 0 0 .009-1.316L4.633.464S4.26.01 3.867 0zm0 .272h.017c.218.005.487.272.564.364l.005.006.005.005 10.17 10.99a.69.69 0 0 1-.008.946l-1.066 1.133-1.498-1.772-8.6-10.39c-.328-.472-.352-.619-.26-.841a.73.73 0 0 1 .671-.44Zm14.341 1.57a.88.88 0 0 0-.655.242l-5.696 6.158 1.694 1.832 5.309-6.514c.325-.433.479-.66.325-1.029a1.12 1.12 0 0 0-.977-.689zm-7.655 12.282 1.318 1.414-5.786 6.13a.65.65 0 0 1-.496.26.75.75 0 0 1-.706-.467c-.112-.269.036-.687.244-.909l.005-.005.005-.006z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.plot.ly/plotly-3.4.0.min.js"></script>
+      
+    
+  </body>
+</html>
